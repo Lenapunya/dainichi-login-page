@@ -1,0 +1,145 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.login-wrapper {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 40px 20px;
+}
+
+.form-container {
+width: 100%;
+max-width: 400px;
+background: #fff;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+text-align: center;
+}
+
+/* .form-container {
+  width: 90%;
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 25px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fefefe;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 5px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  input, button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+  .login-wrapper {
+    padding: 20px 10px;
+  }
+}
+
+.error-message {
+  color:red;
+  margin-top: 10px;
+}
+
+.logo {
+width: 150px;
+margin: 0 auto 20px;
+display: block;
+}
+
+
