@@ -12,8 +12,8 @@ function Login() {
 try {
     await signInWithEmailAndPassword(auth, email, password);
     alert("ログイン成功！");
-    // Redirect to your Google Sites page
-    window.location.href = "https://sites.google.com/view/dainichi-portal/%E3%83%9B%E3%83%BC%E3%83%A0"; // Replace with your actual URL
+    // Redirect to Google Sites page
+    window.location.href = "https://sites.google.com/view/dainichi-portal/%E3%83%9B%E3%83%BC%E3%83%A0"; 
   } catch (error) {
     alert("ログイン失敗: " + error.message);
   }

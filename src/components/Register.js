@@ -28,10 +28,10 @@ if (!email || !password) {
       return;
     }
 
-    if (password.length < 6) {
-      setErrorMessage("パスワードは6文字以上である必要があります。");
-      return;
-    }
+if (password.length < 6) {
+  setErrorMessage("パスワードは6文字以上である必要があります。");
+ return;
+}
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       alert(`${name} さん、登録が完了しました！`);
@@ -48,7 +48,7 @@ if (!email || !password) {
       <form onSubmit={handleRegister}>
         <input name="name" type="text" placeholder="名前" required />
         <input name="email" type="email" placeholder="メール" required />
-        <input name="password" type="password" placeholder="パスワード" required />
+        <input name="password" type="password" placeholder="パスワード6文字以上" required />
         <button type="submit">サインアップ</button>
       </form>
       {errorMessage && <p className="error-message">{errorMessage}</p>}

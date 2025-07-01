@@ -11,6 +11,15 @@
         "source": "**",
         "destination": "/index.html"
       }
-    ]
+    ],
+    
+"redirects": [
+{
+ "source": "/",
+ "destination": "https://dainichi-portal.com",
+ "type": 301
+}
+]
+
   }
 }
