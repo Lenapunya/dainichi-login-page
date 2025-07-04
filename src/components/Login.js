@@ -2,8 +2,14 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 import "../styles.css";
+import { useState } from "react";
 
 function Login() {
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const toggleVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
+  
   const handleLogin = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -25,9 +31,32 @@ try {
             <img src="/logo.png" alt="Logo" className="logo" />
       <div className="form-container">
       <h2>ログイン</h2>
-      <form onSubmit={handleLogin}>
-        <input name="email" type="email" placeholder="メールアドレス" required />
-        <input name="password" type="password" placeholder="パスワード" required />
+      <form onSubmit={handleLogin} className="login-form">
+        <div className="input-group">
+        <input 
+        name="email" 
+        type="email" 
+        placeholder="メールアドレス" 
+        required 
+        className="input-field" />
+       </div>
+
+       <div className="input-group">
+       <input
+            name="password"
+            type={passwordVisible ? "text" : "password"}
+            placeholder="パスワード"
+            required
+            className="input-field"
+            />
+        
+          <span 
+          className="eye-icon"          
+          onClick={toggleVisibility} >
+            {passwordVisible ? '🙈' : '👁️'}
+            </span>
+          </div>
+
         <button type="submit">ログイン</button>
       </form>
       <p>
